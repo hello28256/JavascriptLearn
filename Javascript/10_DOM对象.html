@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM对象</title>
+    <!--你这次的报错，其实是因为 脚本写在 <head> 里，执行太早了，DOM 还没生成。-->
+    <!--DOM对象放在这里会有问题-->
+</head>
+<body>
+
+<!--    <dl id="app">-->
+<!--        <dt>java</dt>-->
+<!--        <dd>javaSE</dd>-->
+<!--        <dd>javaWeb</dd>-->
+<!--        <dd>javaEE</dd>-->
+<!--    </dl>-->
+<!--    <div id="father">-->
+<!--        <h1>标题一</h1>-->
+<!--        <p id="p1">p1</p>-->
+<!--        <p class="p2">p2</p>-->
+<!--    </div>-->
+<!--    <div id="id1">-->
+<!--        123-->
+<!--    </div>-->
+    <div id="father">
+        <h1 id="h1">标题一</h1>
+        <p id="p1">p1</p>
+        <p id="p2">p2</p>
+        <p class="p3">p3</p>
+    </div>
+    <script>
+        // var dl = document.getElementById('app');
+        // console.log(dl);
+        // // 对应CSS选择器
+        // var h1 = document.getElementsByTagName('h1');
+        // var p1 = document.getElementById('p1');
+        // var p2 = document.getElementsByClassName('p2');
+        // var father = document.getElementById('father');
+        // var childerns = father.children;    // 获取父节点下所有的子节点
+        // father.firstChild;
+        // father.lastChild;
+        // var id1 = document.getElementById('id1');
+        // id1.innerText='456'; // 修改文本的值。
+        // id1.innerHTML='<strong>12345</strong>'; // 可以解析HTML文本的标签。操作CSS
+        // id1.style.color = 'blue'; // 修改文本颜色；
+        // id1.style.fontSize='22px';  // 修改文字大小；
+        // id1.style.padding='2em'; // 修改文本位置；
+        var self = document.getElementById('p1');
+        var father = p1.parentElement;
+        // father.removeChild(self);
+        // 删除是一个动态过程
+        // father.removeChild(father.children[0]);
+        // father.removeChild(father.children[1]);
+        // father.removeChild(father.children[2]);
+    </script>
+</body>
+</html>

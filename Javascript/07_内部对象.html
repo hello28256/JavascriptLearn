@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内部对象</title>
+    <script>
+        // ==========================================================
+        // =========================Date=============================
+        var now = new Date();
+        now.getFullYear();  // 年
+        now.getMonth(); // 月
+        now.getDate();  // 日
+        now.getDay();   // 星期
+        now.getHours(); // 时
+        now.getMinutes();   // 分
+        now.getSeconds();   // 秒
+
+        now.getTime();  // 时间戳
+        console.log(new Date());    // 时间戳转时间
+        now = new Date(1625895623770);
+        now.toLocaleString;    // 注意：调用是一个方式是，不是一个属性。
+        now.toLocaleString();
+        now.toGMTString();
+        // ==========================================================
+        // =========================JSON=============================
+        //JSON(JavaScript Object Notation, JS 对象简谱) 是一种轻量级的数据交换格式
+        var admin = {
+            name:"admin",
+            age:31,
+            sex:'M'
+        }
+
+        // 对象转化为JSON字符
+        var jsonAdmin = JSON.stringify(admin);
+        console.log(jsonAdmin)
+        // JSON字符转化为对象，参数为 JSON字符
+        var obj = JSON.parse('{"name":"subei","age":"22","sex":"W"}');
+        console.log(obj)
+        // var obj = {a:'hello',b:'javaScript'};
+        // var json = '{"a":"hello","b":"javaScript"}';
+        // ==========================================================
+        // =========================AJAX=============================
+        // 原生的JS写法，xhr异步请求；
+        // jQuery封装好的方法$(#name).ajax("")；
+        // axios请求；
+    </script>
+</head>
+<body>
+
+</body>
+</html>
