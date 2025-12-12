@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <style>
+        #divMove{
+            width: 120px;
+            height: 100px;
+            border: 1px solid deepskyblue;
+        }
+    </style>
+</head>
+<body>
+<p></p><a href="" id="test-jquery">点我</a></p>
+<!--获取当前鼠标坐标-->
+mouse:<span id="mouseMove"></span>
+<div id="divMove">
+    移动一下试试！
+</div>
+<ul id="test-ul">
+    <li class="js">JavaScript</li>
+    <li name="python">Python</li>
+</ul>
+<script>
+    // document.getElementById('id');
+    // 选择器为CSS选择器
+    $('#test-jquery').click(function () {
+        alert('hello,jQuery!');
+    })
+    // // 原生JS，选择器少，不方便记忆
+    // // 标签
+    // document.getElementsByTagName();
+    // // id
+    // document.getElementById();
+    // // class
+    // document.getElementsByClassName();
+
+    // jQuery CSS中的选择器它全部都能用！
+    $('p').click();	// 标签选择器
+    $('#id1').click();	// id选择器
+    $('.class1').click;	// class选择器
+
+    // 加载完成后，响应事件
+    $(function () {
+        $('#divMove').mousemove(function (e) {
+            $('#mouseMove').text("x: "+e.pageX + ",y: "+e.pageY);
+        });
+    });
+    $('#test-ul li[name=python]').text(); // 获得值
+    $('#test-ul li[name=python]').text('设置值'); // 设置值
+    $('#test-ul').html(); // 获得值
+    $('#test-ul').html('<strong>123</strong>'); // 设置值
+</script>
+</body>
+</html>
